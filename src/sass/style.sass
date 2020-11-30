@@ -1,0 +1,693 @@
+@import "~bootstrap/scss/bootstrap"
+@import "./reset"
+@import "./fonts"
+
+$enable-responsive-font-sizes: true
+
+$main-white: #F9F8F3
+$text-black: #2F2F2F
+$accent: #EB5758
+$black-bg: #1C1B1B
+$text-grey: #C2C2C2
+
+// Common
+body
+    font-family: 'Montserrat', sans-serif
+    font-size: 16px
+    font-weight: normal
+    letter-spacing: 0.02em
+    color: $text-black
+    overflow-x: hidden
+    text-transform: capitalize
+
+p
+    line-height: 20px
+
+h1
+    font-weight: bold
+    font-size: 39px
+    letter-spacing: 0.03em
+    text-transform: uppercase
+
+h2
+    font-weight: bold
+    font-size: 32px
+    letter-spacing: 0.03em
+
+h3
+    font-weight: bold
+    font-size: 20px
+    letter-spacing: 0.02em
+    text-transform: uppercase
+    text-align: center
+
+.owl-nav
+    height: 0px !important
+
+input
+    outline: none!important
+
+    &:focus
+
+        &::-webkit-input-placeholder
+            color: $accent
+
+        &:-moz-placeholder
+            color: $accent
+
+        &::-moz-placeholder
+            color: $accent
+
+        &:-ms-input-placeholder
+            color: $accent
+
+.section
+    position: relative
+    padding-top: 47px
+
+    &-light
+        position: relative
+        background-color: $main-white
+
+    &-dark
+        position: relative
+        background-color: $black-bg
+        color: $main-white
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25)
+        -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25)
+        -moz-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25)
+
+.section-header
+    text-align: center
+    margin-bottom: 8px
+
+.decoration
+    width: 62px
+
+    &__ruby
+        width: 7px
+        height: 7px
+        background-color: $accent
+        transform: matrix(0.71, 0.7, -0.71, 0.71, 0, 0)
+
+.button
+    border-radius: 8px
+    font-weight: bold
+    text-transform: uppercase
+
+    &:active,&:hover,&:focus
+        color: $black-bg
+        background: #CE3132
+        transition: all 0.3s ease
+        border: none
+        outline: none
+
+    &__wrapper
+        margin-top: 30px
+        margin-bottom: 45px
+
+    &-cta
+        background-color: $accent
+        color: $text-black
+
+    &-xl
+        font-size: 24px
+        width: 270px
+        height: 65px
+
+    &-md
+        font-size: 20px
+        width: 170px
+        height: 50px
+
+.scroll-up
+    position: absolute
+    left: -25px
+    bottom: 50%
+    transform: rotate(-90deg)
+
+    &arrow
+        width: 9px
+        height: 16px
+
+    &text
+        color: $accent
+        margin-right: 25px
+
+.scroll-down
+    z-index: 2
+    position: absolute
+    left: -25px
+    bottom: 50%
+    transform: rotate(90deg)
+
+    &text
+        color: $accent
+        margin-right: 25px
+
+    &arrow
+        width: 9px
+        height: 16px
+
+
+.scroll
+    position: absolute
+    bottom: 50%
+    right: -25px
+    transform: rotate(90deg)
+
+    &__ruby
+        margin-right: 10px
+        width: 7px
+        height: 7px
+        border: 2px solid $accent
+        transform: matrix(0.71, 0.7, -0.71, 0.71, 0, 0)
+        transition: ease 0.3s
+        &:last-child()
+            margin-right: 0px
+
+        &:hover
+            background-color: $accent
+
+        &-full
+            background-color: $accent
+
+//Main section
+.main-section
+    min-height: 100vh
+    position: relative
+
+    &__menu
+        padding: 15px 0px
+
+    &__main-text
+        margin-bottom: 90px
+
+    &__header
+        position: relative
+        display: inline-block
+
+    &__slogan
+        font-size: 30px
+        position: absolute
+        bottom: -30%
+        right: -10%
+        color: $accent
+        font-family: 'Rock Salt', cursive
+        text-shadow: 2px -1px 5px rgba(0, 0, 0, 0.89)
+
+    &__bg
+        filter: blur(3px)
+        background: url('../img/BG.png') center center / cover
+        position: absolute
+        width: 100%
+        height: 100%
+
+.full-line
+    z-index: 2
+    position: relative
+    width: 100%
+    height: 0.7px
+    background-color: $main-white
+
+.menu
+
+    &__link
+        color: $main-white
+        font-size: 20px
+        text-transform: uppercase
+        position: relative
+        text-align: right
+
+        &:hover
+            color: $accent
+
+        &::after
+            display: none
+
+    &__toggler
+        width: 32px
+        height: 3px
+        margin-bottom: 8px
+        background-color: $main-white
+        border-radius: 2px
+
+.phone
+    margin-bottom: 15px
+
+.contact-info
+    padding: 15px 0
+
+    &__text
+        font-size: 12px
+        letter-spacing: 0.02em
+        line-height: 11px
+
+    &__header
+        text-transform: uppercase
+        font-size: 17px
+        color: $accent
+        font-weight: bold
+        margin-bottom: 15px
+
+// Gallery section (04)
+.gallery
+
+    &-grid
+        display: flex
+
+    &__img
+        max-width: 350px
+        height: 280px
+        margin: 0 auto
+
+    &__header
+        margin-bottom: 25px
+
+    &__wrapper
+        margin-bottom: 25px
+
+    &__carousel-wrapper
+        position: relative
+        max-width: 350px
+        width: 100%
+
+    &__item
+        width: 350px
+        height: 280px
+
+    &__arrow-prev
+        position: absolute
+        left: 15px
+        top: 50%
+        transform: translateY(-50%)
+
+    &__arrow-next
+        position: absolute
+        right: 15px
+        top: 50%
+        transform: translateY(-50%)
+
+    &__inst
+        justify-content: center
+        margin: 0 auto
+        margin-bottom: 60px
+
+    &__inst-icon
+        width: 58px
+        height: 58px
+
+// Prices section
+.prices-list
+    color: $main-white
+
+    &__bg
+        background: url('../img/priceBG.png') center center / cover
+        position: absolute
+        width: 50%
+        height: 100%
+        top: 0
+
+    &__title
+        margin-bottom: 30px
+
+    &__description
+        width: 245px
+        margin-bottom: 30px
+
+    &__price
+        color: $accent
+
+    &__wrapper
+        border-top: 1px solid $main-white
+        padding-top: 22px
+        margin-bottom: 23px
+
+        &:last-child()
+            border-bottom: 1px solid $main-white
+            padding-bottom: 23px
+            margin-bottom: 0px
+
+    &__wrapper-button
+        margin: 30px 0px 60px 0px
+// Services screen
+
+.services
+    color: $main-white
+    padding-bottom: 58px
+
+    &__item
+        width: 287px
+        height: 191px
+        margin-bottom: 12px
+
+    &__img
+        width: 60px
+        height: 60px
+
+    &__header
+        margin-top: 26px
+        margin-bottom: 8px
+
+        &-large
+            color: $main-white
+
+    &__desc
+        width: 295px
+        height: 57px
+        margin: 0 auto
+
+    .section-header
+
+        &__wrapper
+            margin-bottom: 30px
+            color: $main-white
+
+.process
+    margin-top: 45px
+
+    &__wrapper
+        height: 35px
+
+    &__item
+        width: 67px
+        height: 50px
+
+        &:last-child
+            margin-right: 0px
+
+    &__ruby
+        width: 35px
+        height: 35px
+
+    &__line
+        margin: 0px 5px
+        width: 25px
+        height: 1px
+        background: $main-white
+
+    &__names
+        margin-top: 18px
+
+    &__text
+        margin-top: 8px
+        font-weight: bold
+        font-size: 8px
+        line-height: 10px
+        letter-spacing: 0.02em
+        text-transform: uppercase
+        color: $accent
+
+.comments
+    padding-top: 40px
+    padding-bottom: 60px
+
+.comment
+
+    &__picture
+        width: 150px !important
+        height: 150px
+        margin: 20px auto
+
+    &__commenter-name
+        text-transform: uppercase
+        margin-bottom: 15px
+        text-align: center
+        letter-spacing: 0.02em
+
+    &__text
+        max-width: 700px
+        margin: 0 auto
+        margin-bottom: 28px
+        text-align: center
+
+    &__selector-item
+        height: 10px
+        width: 10px
+        margin-right: 13px
+        border: 1px solid #EB5758
+        box-sizing: border-box
+        transform: rotate(45deg)
+
+        &.active
+            background-color: $accent
+
+        &:last-child
+            margin-right: 0px
+
+// About us  //
+
+.about-us
+
+    &__header-wrapper
+        margin-bottom: 25px
+
+    &__master
+        margin-bottom: -3px
+
+.salon-info
+    margin-bottom: 35px
+
+    & > p
+        text-align: justify
+
+    &__subtitle
+        text-align: center
+        margin-bottom: 20px
+
+// Appointment
+.appointment
+
+    &__section-header
+        color: $main-white
+        padding-top: 70px
+
+    &__title-wrapper
+        margin-bottom: 30px
+
+.form
+
+    &__item
+        width: 100%
+        height: 40px
+        padding: 12px 0px 12px 12px
+        margin-bottom: 12px
+
+        &:active
+            placeholder-color: $accent
+
+        &-lg
+            height: 95px
+
+            &-wrap
+                flex: 1 1 auto
+
+// Footer
+.footer
+    padding-top: 25px
+    padding-bottom: 23px
+
+    &-outro
+        color: $text-grey
+
+        &__wrapper
+            margin-top: 25px
+
+        &__selector-item_active
+            background: $accent
+
+
+@media screen and (min-width: 768px)
+    .form
+
+        &__item
+            height: 53px
+
+            &-lg
+                height: 145px
+
+    .button
+        width: 275px
+        height: 75px
+
+    .process
+
+        &__wrapper
+            height: 70px
+
+        &__item
+            width: 134px
+            height: 100px
+
+        &__ruby
+            width: 70px
+            height: 70px
+
+        &__line
+            width: 75px
+
+        &__text
+            font-size: 13px
+
+@media screen and (min-width: 992px)
+    .contact-info
+
+        &__text
+            line-height: 20px
+
+    .full-line
+        height: 2px
+
+    .main-section
+
+        &__bg
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), radial-gradient(71.63% 71.63% at 50% 60.41%, rgba(0, 0, 0, 0) 57.11%, rgba(0, 0, 0, 0.35) 76.54%) url('../img/active.png') center center / cover
+            filter: none
+
+    .phone
+        font-style: 22px
+
+    .contact-info
+
+        &__text
+            font-size: 16px
+
+        &__header
+            font-size: 20px
+
+    .gallery
+
+        &-grid
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            grid-template-rows: repeat(2, 310px)
+            grid-gap: 10px
+
+        &__img
+            width: 100%
+            max-width: 700px
+            height: 100%
+            background-size: cover
+            background-position: center
+
+        &__carousel-wrapper
+            position: relative
+            max-width: 100%
+            width: 100%
+
+        &-first-row
+            grid-row-start: 1
+            grid-row-end: 2
+
+        &-second-row
+            grid-row-start: 2
+            grid-row-end: 2
+
+        &-1
+            grid-column-start: 1
+            grid-column-end: 3
+
+        &-2
+            grid-column-start: 3
+            grid-column-end: 6
+
+        &-3
+            grid-column-start: 6
+            grid-column-end: 11
+
+        &-4
+            grid-column-start: 11
+            grid-column-end: 13
+
+        &-5
+            grid-column-start: 1
+            grid-column-end: 5
+
+        &-6
+            grid-column-start: 5
+            grid-column-end: 9
+
+        &-7
+            grid-column-start: 9
+            grid-column-end: 13
+
+    .services
+        color: $text-black
+        padding-bottom: 58px
+
+        &__item
+            width: 327px
+            height: 400px
+            background: $main-white
+            border: 1px solid $main-white
+
+            &:hover
+                background: url('../img/active.png') center top / cover
+                color: $main-white
+
+        &__img
+            width: 80px
+            height: 80px
+            margin-top: 87px
+
+    .section-header
+        margin-bottom: 25px
+
+    h1
+        font-size: 64px
+
+    .main-section
+
+        &__slogan
+            font-size: 48px
+
+        &__bg
+            background: url('../img/BG.png') center center / cover
+
+    .menu
+
+        & li
+            margin: 10px
+
+        & li
+            margin-left: 10px
+
+        & li:last-child ::after
+            z-index: -1
+
+        &__link
+            position: relative
+
+            &::after
+                top: 0
+                right: -10px
+                content: ''
+                display: block
+                position: absolute
+                width: 1px
+                height: 20px
+                background-color: $main-white
+
+    .full-line
+        background-color: rgba(196, 196, 196, 0.2)
+
+@media screen and (min-width: 1200px)
+    h1
+        font-size: 96px
+
+    .main-section
+
+        &__slogan
+            font-size: 64px
+
+    .prices-list
+
+        &__title
+            margin-bottom: 65px
+
+        &__description
+            width: 445px
+            margin-bottom: 75px
+
+    .appointment
+        background: url('../img/footerBG.png') center center / cover
